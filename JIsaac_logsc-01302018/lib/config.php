@@ -1,23 +1,16 @@
+<?php 
+define('DS', DIRECTORY_SEPARATOR);
 // Site configuration
-define('APP_DIR', "http://YOUR WEBROOT/YOUR_APP" . DS);  // define site path
-define('APP_PUBLIC',  APP_DIR . 'public' . DS); 
+define('APP_URL', "http://YOUR WEBROOT/YOUR_APP" . DS);  // define site path
+define('APP_FRONT_STORE',  APP_DIR . 'content' . DS); 
 define('APP_SITEEMAIL', '');
-define('APP_SITEKEY', 'd0d48739c3b82db413b3be8fbc5d7ea1c1fd3e2792605d3cbfda1HEM78!!');
-define('APP_INC', 'inc');
-define('APP_CLASS', 'classes');
-define('APP_CONTROL_PANEL', APP_DIR . 'cabin');
-define('APP_LIBRARY', APP_INC  . DS . 'library' . DS);
-define('APP_FILES', APP_DIR . 'files' . DS);
-define('APP_PICTURE', APP_FILES . 'picture' . DS . 'photo' . DS);
-define('SITEPAGE_DEFAULT_LASTMODIFIED_VALUE' , -1 ) ;
-
-if (!defined('APP_SYSPATH')) define('APP_SYSPATH', dirname(dirname(__FILE__)) . '/');
-
-if (!defined('PHP_EOL')) define('PHP_EOL', strtoupper(substr(PHP_OS, 0, 3) == 'WIN') ? "\r\n" : "\n");
-
-$key = 'e0aa8df8a945a35a77f617945f3ded43687a3a456f63c7b4fb6c0ae6e7f622b4';
-$checkIncKey = sha1(mt_rand(1, 1000000).$key);
-define('APP_KEY', $checkIncKey);
+define('APP_SITEKEY', '');
+define('APP_LIB', 'lib');
+define('APP_CLASS', APP_LIB . DS .'classes'. DS);
+define('APP_BACK_STORE', APP_URL . 'cabin');
+define('APP_MODULE', APP_LIB  . DS . 'modules' . DS);
+define('APP_UTILITY', APP_LIB . DS . 'utilities' . DS);
+define('APP_VENDOR', APP_LIB . DS . 'vendor' .  DS);
 
 require 'functions.php';
 require 'rules.php';
