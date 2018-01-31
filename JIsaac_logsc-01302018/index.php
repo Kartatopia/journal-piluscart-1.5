@@ -15,7 +15,6 @@ $parameters = (isset($matched) || is_array($action)
     || is_array($dispatching->URLElement(1))
     || is_array($dispatching->URLElement(2))) ? $param1 : $param2;
     
-setHeader($matched, $action);
 
 include 'public/content.php';
 
@@ -60,16 +59,6 @@ if (!$action) {
            
    }
    
-}
-
-if ($action == 'posts' || $action == 'post') {
-    
-   blogFooter();
-   
-} else {
-
-   setFooter();
-    
 }
 
 ob_end_flush();
