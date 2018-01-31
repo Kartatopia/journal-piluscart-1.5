@@ -15,7 +15,6 @@ $parameters = (isset($matched) || is_array($action)
     || is_array($dispatching->URLElement(1))
     || is_array($dispatching->URLElement(2))) ? $param1 : $param2;
     
-
 include 'public/content.php';
 
 if (!$action) {
